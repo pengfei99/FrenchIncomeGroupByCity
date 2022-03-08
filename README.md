@@ -8,7 +8,8 @@ We will use four files in this project. You can find the origin source file from
 
 This file gives information on the number of firms in every French town, categorized by size.
 
-Column info:
+Column :
+
 |name|description|
 |----|-----------|
 |CODGEO | geographic code for the town (can be joined with `code-insee` column from 'name_geographic_information.csv')|
@@ -30,55 +31,74 @@ Column info:
 
 This file gives geographic coordinate on french town (mainly latitude and longitude, but also region / department codes and names )
 
-EU_circo : name of the European Union Circonscription
-code_région : code of the region attached to the town
-nom_région : name of the region attached to the town
-chef.lieu_région : name the administrative center around the town
-numéro_département : code of the department attached to the town
-nom_département : name of the department attached to the town
-préfecture : name of the local administrative division around the town
-numéro_circonscription : number of the circumpscription
-nom_commune : name of the town
-codes_postaux : post-codes relative to the town
-code_insee : unique code for the town
-latitude : GPS latitude
-longitude : GPS longitude
-éloignement : i couldn't manage to figure out what was the meaning of this number
-netsalarypertownper_category : salaries around french town per job categories, age and sex
+Column info:
 
-CODGEO : unique code of the town
-LIBGEO : name of the town
-SNHM14 : mean net salary
-SNHMC14 : mean net salary per hour for executive
-SNHMP14 : mean net salary per hour for middle manager
-SNHME14 : mean net salary per hour for employee
-SNHMO14 : mean net salary per hour for worker
-SNHMF14 : mean net salary for women
-SNHMFC14 : mean net salary per hour for feminin executive
-SNHMFP14 : mean net salary per hour for feminin middle manager
-SNHMFE14 : mean net salary per hour for feminin employee
-SNHMFO14 : mean net salary per hour for feminin worker
-SNHMH14 : mean net salary for man
-SNHMHC14 : mean net salary per hour for masculin executive
-SNHMHP14 : mean net salary per hour for masculin middle manager
-SNHMHE14 : mean net salary per hour for masculin employee
-SNHMHO14 : mean net salary per hour for masculin worker
-SNHM1814 : mean net salary per hour for 18-25 years old
-SNHM2614 : mean net salary per hour for 26-50 years old
-SNHM5014 : mean net salary per hour for >50 years old
-SNHMF1814 : mean net salary per hour for women between 18-25 years old
-SNHMF2614 : mean net salary per hour for women between 26-50 years old
-SNHMF5014 : mean net salary per hour for women >50 years old
-SNHMH1814 : mean net salary per hour for men between 18-25 years old
-SNHMH2614 : mean net salary per hour for men between 26-50 years old
-SNHMH5014 : mean net salary per hour for men >50 years old
-population : demographic information in France per town, age, sex and living mode
+|name|description|
+|----|-----------|
+|EU_circo | name of the European Union Circonscription|
+|code_région | code of the region attached to the town|
+|nom_région | name of the region attached to the town|
+|chef.lieu_région | name the administrative center around the town|
+|numéro_département | code of the department attached to the town|
+|nom_département | name of the department attached to the town|
+|préfecture | name of the local administrative division around the town|
+|numéro_circonscription | number of the circumpscription|
+|nom_commune | name of the town|
+|codes_postaux | post-codes relative to the town|
+|code_insee | unique code for the town|
+|latitude | GPS latitude|
+|longitude | GPS longitude|
+|éloignement | i couldn't manage to figure out what was the meaning of this number|
 
-NIVGEO : geographic level (arrondissement, communes…)
-CODGEO : unique code for the town
-LIBGEO : name of the town (might contain some utf-8 errors, this information has better quality namegeographicinformation)
-MOCO : cohabitation mode : [list and meaning available in Data description]
-AGE80_17 : age category (slice of 5 years) | ex : 0 -> people between 0 and 4 years old
-SEXE : sex, 1 for men | 2 for women
-NB : Number of people in the category
+## 1.3 net_salary_per_town_categories.csv
+This file describes salaries around french town per job categories, age and sex
+
+Column info:
+
+|name|description|
+|----|-----------|
+|CODGEO | unique code of the town|
+|LIBGEO | name of the town|
+|SNHM14 | mean net salary|
+|SNHMC14 | mean net salary per hour for executive|
+|SNHMP14 | mean net salary per hour for middle manager|
+|SNHME14 | mean net salary per hour for employee|
+|SNHMO14 | mean net salary per hour for worker|
+|SNHMF14 | mean net salary for women|
+|SNHMFC14 | mean net salary per hour for feminin executive|
+|SNHMFP14 | mean net salary per hour for feminin middle manager|
+|SNHMFE14 | mean net salary per hour for feminin employee|
+|SNHMFO14 | mean net salary per hour for feminin worker|
+|SNHMH14 | mean net salary for man|
+|SNHMHC14 | mean net salary per hour for masculin executive|
+|SNHMHP14 | mean net salary per hour for masculin middle manager|
+|SNHMHE14 | mean net salary per hour for masculin employee|
+|SNHMHO14 | mean net salary per hour for masculin worker|
+|SNHM1814 | mean net salary per hour for 18-25 years old| 
+|SNHM2614 | mean net salary per hour for 26-50 years old |
+|SNHM5014 | mean net salary per hour for >50 years old |
+|SNHMF1814 | mean net salary per hour for women between 18-25 years old |
+|SNHMF2614 | mean net salary per hour for women between 26-50 years old |
+|SNHMF5014 | mean net salary per hour for women >50 years old |
+|SNHMH1814 | mean net salary per hour for men between 18-25 years old |
+|SNHMH2614 | mean net salary per hour for men between 26-50 years old |
+|SNHMH5014 | mean net salary per hour for men >50 years old |
+
+## 1.4 population.csv
+
+This file describes the demographic information in France per town, age, sex and living mode
+
+Column info:
+
+| name     |description|
+|----------|-----------|
+| NIVGEO   | geographic level (arrondissement, communes…) |
+| CODGEO   | unique code for the town |
+| LIBGEO   | name of the town (might contain some utf-8 errors, this information has better quality namegeographicinformation)|
+| MOCO     | cohabitation mode : [list and meaning available in Data description]|
+| AGE80_17 | age category (slice of 5 years) | ex : 0 -> people between 0 and 4 years old|
+| SEXE     | sex, 1 for men | 2 for women|
+| NB       | Number of people in the category|
+
+
 These datasets can be merged by : CODGEO = code_insee
