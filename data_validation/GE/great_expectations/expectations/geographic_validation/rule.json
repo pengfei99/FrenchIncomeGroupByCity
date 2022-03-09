@@ -1,0 +1,44 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "geographic_validation.rule",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "EU_circo",
+          "code_r\u00e9gion",
+          "nom_r\u00e9gion",
+          "chef.lieu_r\u00e9gion",
+          "num\u00e9ro_d\u00e9partement",
+          "nom_d\u00e9partement",
+          "pr\u00e9fecture",
+          "num\u00e9ro_circonscription",
+          "nom_commune",
+          "codes_postaux",
+          "code_insee",
+          "latitude",
+          "longitude",
+          "\u00e9loignement"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "max_value": 36840,
+        "min_value": 36840
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "longitude",
+        "regex": "[-+]?(?:\\d*\\.\\d+|\\d+)"
+      },
+      "meta": {}
+    }
+    ]
+}
